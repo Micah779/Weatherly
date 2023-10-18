@@ -1,13 +1,6 @@
-<!-- HTML for the '/' Route's View Function-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}"> <!-- connecting css file -->
-    <title>Weatherly App</title>
-</head>
-<body>
-    <h1>Welcome to the Weatherly App</h1>
-</body>
-</html>
+<!-- Using Jinja to create this HTML page with the base.html template created under templates/base.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Weatherly! {% endblock %}</h1>
+{% endblock %}

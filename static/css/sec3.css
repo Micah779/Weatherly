@@ -2,30 +2,109 @@
 
 .sec3 {
     display: flex;
-    justify-content: space-between;
+    justify-content:left;
     height: 20vh;
     background-color: white;
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 205px;
+    padding-right: 205px;
 }
 
 .hourly-forecast {
-    background-color: #A2D1F0;
+    background-color: #2C94E0;
     width: 43vw;
     height: 20vh;
     border-radius: 20px;
-}
-
-.feels-like {
-    background-color: #A2D1F0;
-    width: 19vw;
-    height: 20vh;
-    border-radius: 20px;
+    margin-right: 20px;
 }
 
 .humidity {
     background-color: #A2D1F0;
-    width: 19vw;
+    width: 13vw;
     height: 20vh;
     border-radius: 20px;
+    margin-right: 20px;
 }
+
+.hourly {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .hourly-times, .hourly-temps {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .hourly-times p {
+    margin-right: 20px;
+    color: black;
+  }
+  
+  .hourly-temps p {
+    margin-right: 50px;
+    color: white;
+  }
+  
+  .hourly-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .divider {
+    width: 90%;
+    height: 1px;
+    background: white;
+    margin-bottom: 10px;
+    margin-top: -5px;
+  }
+
+  /* humidity */
+
+  .humidity {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .humidity-info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* feels like */
+
+  .feels-like {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #A2D1F0;
+    width: 13vw;
+    height: 20vh;
+    border-radius: 20px;
+  }
+
+  .feels-info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .humidity p, .feels-like p {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  .humidity-value, .feels-value {
+    font-size: 30px !important;
+  }
+
+  .humidity img, .feels-like img {
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+  }

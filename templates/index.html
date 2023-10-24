@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="static/css/sec2.css">
     <link rel="stylesheet" href="static/css/sec3.css">
     <link rel="stylesheet" href="static/css/sec4.css">
+
     <title>Weatherly</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
             <img src="/static/media/WeatherlyWhite.png" alt="Weatherly Logo" width="73.5" height="61" class="logo">
          <form class="form-inline" action="{{ url_for('index') }}" method="post">
             <div class="input-background">
-                <input class="zip-input" type="text" placeholder="Search Zip Code" name="zipCode">
+                <input id="zipCodeInput" class="zip-input" type="text" placeholder="Search Zip Code" name="zipCode">
                 <input class="search-button" type="submit" value="">
             </div>
         </form>
@@ -44,19 +45,75 @@
 
     <!-- section with hourly forecast, feels like, and humidity condition -->
     <div class="sec3">
-        <div class="hourly-forecast"></div>
-        <div class="feels-like"></div>
-        <div class="humidity"></div>
+        <div class="hourly-forecast">
+            <div class="hourly">
+                <p class="hourly-title"> Hourly Forecast </p>
+                <div class="hourly-times">
+                    <p class="time-1">9 PM</p>
+                    <p class="time-2">12 AM</p>
+                    <p class="time-3">3 AM</p>
+                    <p class="time-4">6 AM</p>
+                    <p class="time-5">9 AM</p>
+                    <p class="time-6">12 PM</p>
+                    <p class="time-7">3 PM</p>
+                    <p class="time-8">6 PM</p>
+                </div>
+
+                <span class="divider"></span>
+
+                <div class="hourly-temps">
+                    <p class="temp-1">7°</p>
+                    <p class="temp-2">7°</p>
+                    <p class="temp-3">7°</p>
+                    <p class="temp-4">7°</p>
+                    <p class="temp-5">7°</p>
+                    <p class="temp-6">7°</p>
+                    <p class="temp-7">7°</p>
+                    <p class="temp-8">7°</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="humidity">
+            <div class="humidity-info">
+                <img src="/static/media/humidity.png" alt="humidity-icon">
+                <p> Humidity </p>
+            </div>
+            <p class="humidity-value"> 40% </p>
+        </div>
+
+        <div class="feels-like">
+            <div class="feels-info">
+                <img src="/static/media/temp.png" alt="feels-icon">
+                <p> Feels Like </p>
+            </div>
+            <p class="feels-value"> 52° </p>
+        </div>
     </div>
 
     <!-- section with 5-day forecast, gps location map -->
     <div class="sec4">
         <div class="five-day-forecast"></div>
-        <div class="visual-map"></div>
+        <div class="visual-map">
+            <div id="map"></div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- scripts for google maps api -->
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+          key: "YOUR_API_KEY",
+          v: "weekly",
+          // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+          // Add other bootstrap parameters as needed, using camel case.
+        });
+      </script>
+
+      <!-- google maps script -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </body>
 </html>

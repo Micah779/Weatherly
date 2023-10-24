@@ -3,10 +3,10 @@
 .sec2 {
     display: flex;
     justify-content: space-between;
-    padding: 80px 90px 0 90px; 
+    padding: 80px 205px 0 205px; 
   }
   
-  .left-side {
+.left-side {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,23 +14,26 @@
     font-weight: bold;
   }
   
-  .right-side {
+.right-side {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     color: black;
     font-size: 30px; 
     line-height: 1;
-    font-weight: bold;
+    font-weight:bold;
   }
+.right-side p {
+  margin-left: 10px;
+}
   
-  .temp-cond, .temperature {
+.temp-cond, .temperature {
     display: flex;
     color: black;
     font-size: 30px;
   }
 
-  .location {
+.location {
     stroke-width: bold;
     color: #1C658C;
     font-size: 30px;

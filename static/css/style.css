@@ -6,22 +6,6 @@
     background-color: #2C94E0; /* Blue */
 }
 
-.sec2 {
-    height: 23vh;
-    background-color: #f5f5f5;
-}
-
-.sec3 {
-    height: 17vh;
-    background-color: #d3d3d3;
-}
-
-.sec4 {
-    height: 48vh;
-    background-color: #808080;
-}
-
-
 .topnav {
     background-color:#2C94E0;
     overflow: hidden;
@@ -53,10 +37,6 @@ input, form {
     padding-right: 10px;
     padding-left: 40px;
     background: url('/static/media/searchicon.png') 100% center no-repeat;
-}
-
-.form-inline {
-    margin-right: 31px;
 }
 
 ::placeholder {

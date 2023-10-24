@@ -6,6 +6,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/sec2.css">
+    <link rel="stylesheet" href="static/css/sec3.css">
+    <link rel="stylesheet" href="static/css/sec4.css">
     <title>Weatherly</title>
 </head>
 <body>
@@ -23,16 +26,33 @@
         </nav>
     </div>
 
+    <!-- section with location, temperatures, and weather condition -->
     <div class="sec2">
+        <div class="left-side">
+            <p class="location"> {{ location }} </p>
+            <div class="temp-cond">
+                <p class="temperature"> {{ temp }}° | </p>
+                <p class="condition"> | {{ weather }} </p>
+            </div>
+        </div>
 
+        <div class="right-side">
+            <p class="high-temp"> H: {{ high }}° </p>
+            <p calss="low-temp"> L: {{ low }}° </p>
+        </div>
     </div>
 
+    <!-- section with hourly forecast, feels like, and humidity condition -->
     <div class="sec3">
-
+        <div class="hourly-forecast"></div>
+        <div class="feels-like"></div>
+        <div class="humidity"></div>
     </div>
 
+    <!-- section with 5-day forecast, gps location map -->
     <div class="sec4">
-
+        <div class="five-day-forecast"></div>
+        <div class="visual-map"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

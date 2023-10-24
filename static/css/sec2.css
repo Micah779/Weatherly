@@ -1,0 +1,37 @@
+/* styling for index.html section 2 */
+
+.sec2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 90px 0 90px; 
+  }
+  
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1;
+    font-weight: bold;
+  }
+  
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+    font-size: 30px; 
+    line-height: 1;
+    font-weight: bold;
+  }
+  
+  .temp-cond, .temperature {
+    display: flex;
+    color: black;
+    font-size: 30px;
+  }
+
+  .location {
+    stroke-width: bold;
+    color: #1C658C;
+    font-size: 30px;
+  }

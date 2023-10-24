@@ -18,13 +18,15 @@ def index(): # view function
         data = get_weather_results(zipcode, api_key)
 
         # variables
-        temp = "{0:.2f}".format(data["main"]["temp"])
-        feels_like = "{0:.2f}".format(data["main"]["feels_like"])
+        temp = "{:.0f}".format(data["main"]["temp"])
+        feels_like = "{:.0f}".format(data["main"]["feels_like"])
         weather = data["weather"][0]["main"]
         location = data["name"]
+        high = "{:.0f}".format(data["main"]["temp_max"])
+        low = "{:.0f}".format(data["main"]["temp_min"])
 
     # renders the index.html file as a view function with all of the variables from the api data
-    return render_template('index.html', location=location, temp=temp, feels_like=feels_like, weather=weather)
+    return render_template('index.html', location=location, temp=temp, feels_like=feels_like, weather=weather, high=high, low=low)
 
 # function to take in a zipcode and api key to return weather results
 def get_weather_results(zipcode, api_key):

@@ -1,0 +1,31 @@
+/* styling for index.html section 3 */
+
+.sec3 {
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+    background-color: white;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.hourly-forecast {
+    background-color: #A2D1F0;
+    width: 43vw;
+    height: 20vh;
+    border-radius: 20px;
+}
+
+.feels-like {
+    background-color: #A2D1F0;
+    width: 19vw;
+    height: 20vh;
+    border-radius: 20px;
+}
+
+.humidity {
+    background-color: #A2D1F0;
+    width: 19vw;
+    height: 20vh;
+    border-radius: 20px;
+}

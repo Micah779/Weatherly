@@ -1,0 +1,25 @@
+/* styling for index.html section 4 */
+
+.sec4 {
+    display: flex;
+    justify-content: space-between;
+    height: 45vh;
+    background-color: white;
+    padding-top: 10px;
+    padding-right: 90px;
+    padding-left: 90px;
+}
+
+.five-day-forecast {
+    height: 40vh;
+    background-color: #A2D1F0;
+    width: 65vw;
+    border-radius: 20px;
+}
+
+.visual-map {
+    height: 40vh;
+    background-color: #A2D1F0;
+    width: 19vw;
+    border-radius: 20px;
+}

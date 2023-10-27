@@ -18,7 +18,7 @@ def index(): # view function
         current_data = get_weather_results(zipcode, api_key)
 
         # sec 2 current weather variables
-        temp = "{:.0f}".format(current_data["main"]["temp"]) # current temp
+        temp = "{:.0f}".format((current_data["main"]["temp"])//1) # current temp
         weather = current_data["weather"][0]["main"] # weather type
         location = current_data["name"] # location
         high = "{:.0f}".format(current_data["main"]["temp_max"]) # current high

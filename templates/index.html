@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="static/css/sec2.css">
     <link rel="stylesheet" href="static/css/sec3.css">
     <link rel="stylesheet" href="static/css/sec4.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 
     <title>Weatherly</title>
 </head>
@@ -91,9 +93,71 @@
         </div>
     </div>
 
-    <!-- section with 5-day forecast, gps location map -->
+    <!-- section with 7-day forecast, gps location map -->
     <div class="sec4">
-        <div class="five-day-forecast"></div>
+        <div class="forecast">
+            <div class="forecast__header">
+                <h2>7 Day Forecast</h2>
+            </div>
+            <div class="forecast__list">
+                <div class="forecast__day-row">
+                    <dt class="forecast__day">Sunday</dt>
+                    <dd class="forecast__low">49°</dd>
+                    <dd class="forecast__high">56°</dd>
+                    <dd class="forecast__humidity">
+                        <img src="/static/media/humidity.png" alt=""> 40%
+                    </dd>
+                </div>
+                <div class="forecast__day-row">
+                    <dt class="forecast__day">Monday</dt>
+                    <dd class="forecast__low">51°</dd>
+                    <dd class="forecast__high">59°</dd>
+                    <dd class="forecast__humidity">
+                        <img src="/static/media/humidity.png" alt=""> 42%
+                    </dd>
+                </div>
+                <div class="forecast__day-row">
+                    <dt class="forecast__day">Tuesday</dt>
+                    <dd class="forecast__low">49°</dd>
+                    <dd class="forecast__high">56°</dd>
+                    <dd class="forecast__humidity">
+                        <img src="/static/media/humidity.png" alt=""> 40%
+                    </dd>
+                </div>
+                <div class="forecast__day-row">
+                    <dt class="forecast__day">Wednesday</dt>
+                    <dd class="forecast__low">51°</dd>
+                    <dd class="forecast__high">59°</dd>
+                    <dd class="forecast__humidity">
+                        <img src="/static/media/humidity.png" alt=""> 42%
+                    </dd>
+                </div>
+                <div class="forecast__day-row">
+                    <dt class="forecast__day">Thursday</dt>
+                    <dd class="forecast__low">51°</dd>
+                    <dd class="forecast__high">59°</dd>
+                    <dd class="forecast__humidity">
+                        <img src="/static/media/humidity.png" alt=""> 42%
+                    </dd>
+                </div>
+                <div class="forecast__day-row">
+                    <dt class="forecast__day">Friday</dt>
+                    <dd class="forecast__low">51°</dd>
+                    <dd class="forecast__high">59°</dd>
+                    <dd class="forecast__humidity">
+                        <img src="/static/media/humidity.png" alt=""> 42%
+                    </dd>
+                </div>
+                <div class="forecast__day-row">
+                    <dt class="forecast__day">Saturday</dt>
+                    <dd class="forecast__low">51°</dd>
+                    <dd class="forecast__high">59°</dd>
+                    <dd class="forecast__humidity">
+                        <img src="/static/media/humidity.png" alt=""> 42%
+                    </dd>
+                </div>
+            </div>
+        </div>
         <div class="visual-map">
             <div id="map"></div>
         </div>

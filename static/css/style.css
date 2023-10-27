@@ -1,13 +1,17 @@
 /* styling for index.html */
+body {
+    background-color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
 
 /* Define heights and background colors for the sections */
 .sec1 {
-    height: 12vh;
-    background-color: #2C94E0; /* Blue */
+    height: 12%;
+    width: 100%;
 }
 
 .topnav {
-    background-color:#2C94E0;
+    background-color: #CDCDCD;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -16,7 +20,7 @@
 }
 
 input, form {
-    background-color: #1C658C;
+    background-color: #FFFFFF;
     color: white;
     text-align: center;
     border: none;
@@ -26,7 +30,7 @@ input, form {
 
 .input-background {
     display: flex;
-    background-color: #1C658C;
+    background-color: #FFFFFF;
     justify-content:space-between; /* Align contents to the right */
     align-items: center;
     border-radius: 50px;
@@ -40,12 +44,12 @@ input, form {
 }
 
 ::placeholder {
-    color: white!important;
+    color: black!important;
 }
 
 .zip-input, .zip-input:focus {
-    color: white;
-    background-color: #1C658C !important;
+    color: black;
+    background-color: #FFFFFF !important;
     border-radius: 50px;
     padding-left: 45px;
 }

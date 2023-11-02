@@ -27,6 +27,7 @@ def index(): # view function
         # sec 3 weather variables
         humidity = "{:.0f}".format(current_data["main"]["humidity"]) # current humidity
         feels_like = "{:.0f}".format(current_data["main"]["feels_like"]) # current feels temp
+        
 
 
     # renders the index.html file as a view function with all of the variables from the api data

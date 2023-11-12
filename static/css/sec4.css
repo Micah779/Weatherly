@@ -8,15 +8,12 @@
 .visual-map {
     position: relative;
     overflow: hidden;
-    background-color:  #CDCDCD;
-    width: 40%;
-    border-radius: 20px;
-    margin-left: 40px;
+    background-color:  #fff;
+    width: 42.5%;
 }
 
 #map {
     position: absolute;
-    border-radius: inherit;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,10 +22,10 @@
 
 /* 7-day forecast section */
 .forecast {
-    background-color: #CDCDCD;
-    width: 60%;
-    border-radius: 20px;
+    background-color: #fff;
+    width: 55%;
     padding: 20px;
+    margin-right: 2.5%
 }
 
 .forecast__list {
@@ -41,16 +38,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ccc;
 
     color: black;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
 }
 
 .forecast__day {
     flex: 1;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .forecast__day-row dd {
@@ -63,3 +59,7 @@ img {
     margin-right: 5px;
 }
 
+h2 {
+    font-size: 18px;
+    color: red;
+}

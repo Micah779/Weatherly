@@ -10,19 +10,17 @@
 }
 
 .hourly-forecast {
-    background-color: #CDCDCD;
-    width: 60%;
+    background-color: #fff;
+    width: 55%;
     height: 20vh;
-    border-radius: 20px;
-    margin-right: 20px;
+    margin-right: 2.5%;
 }
 
 .humidity {
-    background-color: #CDCDCD;
+    background-color: #fff;
     width: 20%;
     height: 20vh;
-    border-radius: 20px;
-    margin-right: 20px;
+    margin-right: 2.5%;
 }
 
 .hourly {
@@ -35,7 +33,7 @@
     display: flex;
     flex-direction: row;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
   }
   
   .hourly-times p {
@@ -44,14 +42,14 @@
   }
   
   .hourly-temps p {
-    margin-right: 50px;
+    margin-right: 40px;
     color: #000000;
   }
   
   .hourly-title {
     font-size: 18px;
-    font-weight: bold;
-    color: #000000;
+    font-weight: normal;
+    color: red;
   }
 
   .divider {
@@ -81,10 +79,9 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    background-color: #CDCDCD;
+    background-color: #fff;
     width: 20%;
     height: 20vh;
-    border-radius: 20px;
   }
 
   .feels-info {
@@ -95,7 +92,7 @@
   .humidity p, .feels-like p {
     color: black;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
     margin-right: 20px;
   }
 
@@ -107,4 +104,8 @@
     width: 28px;
     height: 28px;
     margin-right: 5px;
+  }
+
+  .humidity-info p, .feels-info p{
+    color: red;
   }

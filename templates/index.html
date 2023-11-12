@@ -12,20 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 
-    <title>Weatherly</title>
+    <title>FlameForecast</title>
 </head>
 <body>
     
     <!-- Navigation Bar -->
     <div class="sec1">
         <nav class="topnav">
-            <img src="/static/media/WeatherlyWhite.png" alt="Weatherly Logo" width="73.5" height="61" class="logo">
-         <form class="form-inline" action="{{ url_for('index') }}" method="post">
-            <div class="input-background">
-                <input id="zipCodeInput" class="zip-input" type="text" placeholder="Search Zip Code" name="zipCode">
-                <input class="search-button" type="submit" value="">
-            </div>
-        </form>
+            <img src="/static/media/flameforecast.png" alt="FlameForecast Logo" width="80" height="60" class="logo">
+            <form class="form-inline" action="{{ url_for('index') }}" method="post">
+                <div class="input-background">
+                    <input id="zipCodeInput" class="zip-input" type="text" placeholder="Search Zip Code" name="zipCode">
+                    <input class="search-button" type="submit" value="">
+                </div>
+            </form>
         </nav>
     </div>
 
@@ -49,29 +49,29 @@
     <div class="sec3">
         <div class="hourly-forecast">
             <div class="hourly">
-                <p class="hourly-title"> Hourly Forecast </p>
+                <p class="hourly-title"> Hourly Forecast (Today) </p>
                 <div class="hourly-times">
-                    <p class="time-1">9 PM</p>
-                    <p class="time-2">12 AM</p>
-                    <p class="time-3">3 AM</p>
-                    <p class="time-4">6 AM</p>
-                    <p class="time-5">9 AM</p>
-                    <p class="time-6">12 PM</p>
-                    <p class="time-7">3 PM</p>
-                    <p class="time-8">6 PM</p>
+                    <p class="time-1">12 AM</p>
+                    <p class="time-2">3 AM</p>
+                    <p class="time-3">6 AM</p>
+                    <p class="time-4">9 AM</p>
+                    <p class="time-5">12 PM</p>
+                    <p class="time-6">3 PM</p>
+                    <p class="time-7">6 PM</p>
+                    <p class="time-8">9 PM</p>
                 </div>
 
                 <span class="divider"></span>
 
                 <div class="hourly-temps">
-                    <p class="temp-1">7°</p>
-                    <p class="temp-2">7°</p>
-                    <p class="temp-3">7°</p>
-                    <p class="temp-4">7°</p>
-                    <p class="temp-5">7°</p>
-                    <p class="temp-6">7°</p>
-                    <p class="temp-7">7°</p>
-                    <p class="temp-8">7°</p>
+                    <p class="temp-1">{{ hourly_temps[0] }}°</p>
+                    <p class="temp-2">{{ hourly_temps[1] }}°</p>
+                    <p class="temp-3">{{ hourly_temps[2] }}°</p>
+                    <p class="temp-4">{{ hourly_temps[3] }}°</p>
+                    <p class="temp-5">{{ hourly_temps[4] }}°</p>
+                    <p class="temp-6">{{ hourly_temps[5] }}°</p>
+                    <p class="temp-7">{{ hourly_temps[6] }}°</p>
+                    <p class="temp-8">{{ hourly_temps[7] }}°</p>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
                 <img src="/static/media/humidity.png" alt="humidity-icon">
                 <p> Humidity </p>
             </div>
-            <p class="humidity-value"> 40% </p>
+            <p class="humidity-value"> {{ humidity }}% </p>
         </div>
 
         <div class="feels-like">
@@ -89,7 +89,7 @@
                 <img src="/static/media/temp.png" alt="feels-icon">
                 <p> Feels Like </p>
             </div>
-            <p class="feels-value"> 52° </p>
+            <p class="feels-value"> {{ feels_like }}° </p>
         </div>
     </div>
 
@@ -97,7 +97,7 @@
     <div class="sec4">
         <div class="forecast">
             <div class="forecast__header">
-                <h2>7 Day Forecast</h2>
+                <h2 class="area-title">7 Day Forecast</h2>
             </div>
             <div class="forecast__list">
                 <div class="forecast__day-row">

@@ -99,26 +99,33 @@ def index():
 
     forecast_data = {}
 
+    default_zipcode = "16801"
+
     if request.method == "POST":
+        # If there is a POST request, use the submitted ZIP code
         zipcode = request.form['zipCode']
-        current_data = get_weather_results(zipcode, api_key)
-        hourly_data = get_hourly_weather(zipcode, api_key)
+    else:
+        # For initial load, use the default ZIP code
+        zipcode = default_zipcode
 
-        # Fetch Open Meteo forecast data
-        forecast_data = get_open_meteo_forecast(zipcode, geo_key, openmeteo)
+    current_data = get_weather_results(zipcode, api_key)
+    hourly_data = get_hourly_weather(zipcode, api_key)
 
-        # sec 2 current weather variables
-        temp = "{:.0f}".format((current_data["main"]["temp"]) // 1)  # current temp
-        weather = current_data["weather"][0]["main"]  # weather type
-        location = current_data["name"]  # location
-        high = "{:.0f}".format(current_data["main"]["temp_max"])  # current high
-        low = "{:.0f}".format(hourly_data["list"][4]["main"]["temp_min"])  # current low
+    # Fetch Open Meteo forecast data
+    forecast_data = get_open_meteo_forecast(zipcode, geo_key, openmeteo)
 
-        # sec 3 weather variables
-        humidity = "{:.0f}".format(current_data["main"]["humidity"])  # current humidity
-        feels_like = "{:.0f}".format(current_data["main"]["feels_like"])  # current feels temp
+    # sec 2 current weather variables
+    temp = "{:.0f}".format((current_data["main"]["temp"]) // 1)  # current temp
+    weather = current_data["weather"][0]["main"]  # weather type
+    location = current_data["name"]  # location
+    high = "{:.0f}".format(current_data["main"]["temp_max"])  # current high
+    low = "{:.0f}".format(hourly_data["list"][4]["main"]["temp_min"])  # current low
 
-        hourly_temps = [round(entry["main"]["temp"]) for entry in hourly_data["list"][:8]]
+    # sec 3 weather variables
+    humidity = "{:.0f}".format(current_data["main"]["humidity"])  # current humidity
+    feels_like = "{:.0f}".format(current_data["main"]["feels_like"])  # current feels temp
+
+    hourly_temps = [round(entry["main"]["temp"]) for entry in hourly_data["list"][:8]]
 
     # renders the index.html file as a view function with all of the variables from the api data
     return render_template('index.html', location=location, temp=temp, feels_like=feels_like,

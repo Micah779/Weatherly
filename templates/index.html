@@ -100,79 +100,33 @@
                 <h2 class="area-title">7 Day Forecast</h2>
             </div>
             <div class="forecast__list">
-                <div class="forecast__day-row">
-                    <dt class="forecast__day">Sunday</dt>
-                    <dd class="forecast__low">49°</dd>
-                    <dd class="forecast__high">56°</dd>
-                    <dd class="forecast__humidity">
-                        <img src="/static/media/humidity.png" alt=""> 40%
-                    </dd>
-                </div>
-                <div class="forecast__day-row">
-                    <dt class="forecast__day">Monday</dt>
-                    <dd class="forecast__low">51°</dd>
-                    <dd class="forecast__high">59°</dd>
-                    <dd class="forecast__humidity">
-                        <img src="/static/media/humidity.png" alt=""> 42%
-                    </dd>
-                </div>
-                <div class="forecast__day-row">
-                    <dt class="forecast__day">Tuesday</dt>
-                    <dd class="forecast__low">49°</dd>
-                    <dd class="forecast__high">56°</dd>
-                    <dd class="forecast__humidity">
-                        <img src="/static/media/humidity.png" alt=""> 40%
-                    </dd>
-                </div>
-                <div class="forecast__day-row">
-                    <dt class="forecast__day">Wednesday</dt>
-                    <dd class="forecast__low">51°</dd>
-                    <dd class="forecast__high">59°</dd>
-                    <dd class="forecast__humidity">
-                        <img src="/static/media/humidity.png" alt=""> 42%
-                    </dd>
-                </div>
-                <div class="forecast__day-row">
-                    <dt class="forecast__day">Thursday</dt>
-                    <dd class="forecast__low">51°</dd>
-                    <dd class="forecast__high">59°</dd>
-                    <dd class="forecast__humidity">
-                        <img src="/static/media/humidity.png" alt=""> 42%
-                    </dd>
-                </div>
-                <div class="forecast__day-row">
-                    <dt class="forecast__day">Friday</dt>
-                    <dd class="forecast__low">51°</dd>
-                    <dd class="forecast__high">59°</dd>
-                    <dd class="forecast__humidity">
-                        <img src="/static/media/humidity.png" alt=""> 42%
-                    </dd>
-                </div>
-                <div class="forecast__day-row">
-                    <dt class="forecast__day">Saturday</dt>
-                    <dd class="forecast__low">51°</dd>
-                    <dd class="forecast__high">59°</dd>
-                    <dd class="forecast__humidity">
-                        <img src="/static/media/humidity.png" alt=""> 42%
-                    </dd>
-                </div>
+                {% for date in forecast_data["date"] %}
+                    <div class="forecast__day-row">
+                        <dt class="forecast__day">{{ date.strftime('%A') }}</dt>
+                        <dd class="forecast__low">{{ forecast_data["low"][loop.index0] }}°</dd>
+                        <dd class="forecast__high">{{ forecast_data["high"][loop.index0] }}°</dd>
+                        <dd class="forecast__humidity">
+                            <img src="/static/media/humidity.png" alt=""> {{ forecast_data["uv"][loop.index0] }}%
+                        </dd>
+                    </div>
+                {% endfor %}
             </div>
         </div>
         <div class="visual-map">
             <div id="map">
                 <iframe
-                width="600"
-                height="450"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAX2Sp73OJASXuK6wiUSbEH1KMpyrMcwC0
-                  &q=Space+Needle,Lancaster+PA">
-              </iframe>
+                    width="600"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAX2Sp73OJASXuK6wiUSbEH1KMpyrMcwC0
+                        &q=Space+Needle,Lancaster+PA">
+                </iframe>
             </div>
         </div>
-    </div>
+    </div>    
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

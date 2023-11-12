@@ -59,3 +59,11 @@ input, form {
     color: red;
 }
 
+.location-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.location {
+    margin-right: 10px;
+}

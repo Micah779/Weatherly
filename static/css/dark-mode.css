@@ -1,0 +1,32 @@
+/* dark-mode.css */
+.dark-mode {
+    background-color: #000; /* Use a dark background color that provides good contrast */
+    color: #fff; /* Use a light text color for readability */
+}
+
+.dark-mode .right-side,
+.dark-mode .temp-cond,
+.dark-mode .temperature,
+.dark-mode .location {
+    color: #fff; /* Light text color for section 2 */
+}
+
+.dark-mode .hourly-forecast,
+.dark-mode .humidity,
+.dark-mode .feels-like,
+.dark-mode .forecast,
+.dark-mode .visual-map,
+.dark-mode .topnav {
+    background-color: #333; /* Dark background color for specific sections */
+}
+
+.dark-mode .hourly-times p,
+.dark-mode .hourly-temps p,
+.dark-mode .humidity p,
+.dark-mode .feels-like p,
+.dark-mode .forecast__day-row {
+    color: #fff; /* Light text color for specific elements */
+}
+
+
+

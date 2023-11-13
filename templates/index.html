@@ -122,7 +122,7 @@
             </div>
         </div>
         <div class="visual-map">
-            <div id="map">
+            <div id="map" data-latitude="{{ latitude }}" data-longitude="{{ longitude }}">
                 <iframe
                     width="600"
                     height="450"
@@ -130,8 +130,9 @@
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAX2Sp73OJASXuK6wiUSbEH1KMpyrMcwC0
-                        &q=Space+Needle,Lancaster+PA">
+                    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyAX2Sp73OJASXuK6wiUSbEH1KMpyrMcwC0
+                        &center={{ latitude }},{{ longitude }}
+                        &zoom=12">
                 </iframe>
             </div>
         </div>
@@ -144,7 +145,7 @@
     <!-- scripts for google maps api -->
     <script>
         (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-          key: "YOUR_API_KEY",
+          key: "AIzaSyAX2Sp73OJASXuK6wiUSbEH1KMpyrMcwC0",
           v: "weekly",
           // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
           // Add other bootstrap parameters as needed, using camel case.
@@ -153,6 +154,31 @@
 
       <!-- google maps script -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script>
+        // Wait for the DOM to be ready
+        document.addEventListener("DOMContentLoaded", function() {
+          // Get the map element
+          const mapElement = document.getElementById("map");
+      
+          // Get latitude and longitude from data attributes
+          const latitude = parseFloat(mapElement.dataset.latitude) || 0; // Default to 0 if not found
+          const longitude = parseFloat(mapElement.dataset.longitude) || 0;
+      
+          // Initialize the map
+          const map = new google.maps.Map(mapElement, {
+            center: { lat: latitude, lng: longitude },
+            zoom: 12
+          });
+      
+          // Add a marker at the specified location
+          new google.maps.Marker({
+            position: { lat: latitude, lng: longitude },
+            map: map
+          });
+        });
+      </script>
+
 
     <!-- Light/Dark Mode -->
     <script>

@@ -16,8 +16,8 @@ retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
 openmeteo = openmeteo_requests.Client(session=retry_session)
 
 # Function to convert zipcode into lat and long for daily forecast data
-def get_coordinates_from_zip(zipcode, geo_key):
-    geocoding_url = f"https://api.opencagedata.com/geocode/v1/json?q={zipcode}&key={geo_key}"
+def get_coordinates_from_zip(zipcode, geo_key, country_code="US"):
+    geocoding_url = f"https://api.opencagedata.com/geocode/v1/json?q={zipcode}&key={geo_key}&countrycode={country_code}"
     r = requests.get(geocoding_url)
     data = r.json()
 
@@ -114,6 +114,10 @@ def index():
     # Fetch Open Meteo forecast data
     forecast_data = get_open_meteo_forecast(zipcode, geo_key, openmeteo)
 
+    # Extract latitude and longitude
+    coordinates = get_coordinates_from_zip(zipcode, geo_key)
+    latitude, longitude = coordinates if coordinates else (39.82, 98.57)  # Default values if not found
+
     # sec 2 current weather variables
     temp = "{:.0f}".format((current_data["main"]["temp"]) // 1)  # current temp
     weather = current_data["weather"][0]["main"]  # weather type
@@ -130,7 +134,7 @@ def index():
     # renders the index.html file as a view function with all of the variables from the api data
     return render_template('index.html', location=location, temp=temp, feels_like=feels_like,
                            weather=weather, high=high, low=low, uv=uv, hourly_temps=hourly_temps,
-                           forecast_data=forecast_data, humidity=humidity)  # Pass forecast_data to the template
+                           forecast_data=forecast_data, humidity=humidity, latitude=latitude, longitude=longitude)  # Pass forecast_data to the template
 
 if __name__ == '__main__':
     app.run(debug=True)

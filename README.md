@@ -17,6 +17,14 @@ FlameForecast is a web application that provides weather information along with 
 
 ## Getting Started
 
+## Screenshots
+
+![Screenshot 1](/weatherlyshot2.png)
+*Light Mode*
+
+![Screenshot 2](/weatherlyshot1.png)
+*Dark Mode*
+
 ### Prerequisites
 
 - [Python](https://www.python.org/) installed

@@ -1,4 +1,4 @@
-# FlameForecast
+# FlameForecast (Formerly Weatherly)
 
 FlameForecast is a web application that provides weather information along with wildfire risk assessments. It leverages Flask, SQLite, and the OpenWeather API to deliver current weather conditions, a 7-day forecast, and a predictive model for assessing wildfire risks based on historical weather data.
 
@@ -10,12 +10,20 @@ FlameForecast is a web application that provides weather information along with 
 
 ## Technologies Used
 
-- **Flask:** A lightweight Python web framework for building the backend.
+- **(Active) Flask:** A lightweight Python web framework for building the backend.
 - **SQLite:** A simple and easy-to-use database for storing user accounts and other persistent data.
-- **OpenWeather API:** Provides current weather data for any location.
-- **Machine Learning Model:** Implements a predictive model for wildfire risk assessment.
+- **(Active) OpenWeather API:** Provides current weather data for any location.
+- **(Planned) Machine Learning Model:** Implements a predictive model for wildfire risk assessment.
 
 ## Getting Started
+
+## Screenshots
+
+![Screenshot 1](/weatherlyshot2.png)
+*Light Mode*
+
+![Screenshot 2](/weatherlyshot1.png)
+*Dark Mode*
 
 ### Prerequisites
 

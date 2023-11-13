@@ -10,10 +10,10 @@ FlameForecast is a web application that provides weather information along with 
 
 ## Technologies Used
 
-- **Flask:** A lightweight Python web framework for building the backend.
+- **(Active) Flask:** A lightweight Python web framework for building the backend.
 - **SQLite:** A simple and easy-to-use database for storing user accounts and other persistent data.
-- **OpenWeather API:** Provides current weather data for any location.
-- **Machine Learning Model:** Implements a predictive model for wildfire risk assessment.
+- **(Active) OpenWeather API:** Provides current weather data for any location.
+- **(Planned) Machine Learning Model:** Implements a predictive model for wildfire risk assessment.
 
 ## Getting Started
 

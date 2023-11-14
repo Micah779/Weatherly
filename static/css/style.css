@@ -1,4 +1,4 @@
-/* styling for index.html */
+/* Global Styles */
 body {
     background-color: #f5f5f5;
     font-family: 'San Francisco', Arial, sans-serif;
@@ -10,6 +10,7 @@ body {
     width: 100%;
 }
 
+/* Navbar and Search Input Styles */
 .topnav {
     background-color: #fff;
     overflow: hidden;
@@ -19,40 +20,33 @@ body {
     padding: 16px 205px 16px 205px;
 }
 
-input, form {
-    background-color: #f5f5f5;
-    color: white;
-    text-align: center;
-    border: none;
-    border-radius: 50px;
-    padding: 5px;
-}
-
 .input-background {
     display: flex;
     background-color: #f5f5f5;
-    justify-content:space-between; /* Align contents to the right */
+    justify-content: space-between; /* Align contents to the right */
     align-items: center;
     border-radius: 50px;
     padding: 0 5px 0 5px;
+}
+
+input, form, .zip-input, .zip-input:focus {
+    background-color: #f5f5f5;
+    color: black; /* Adjusted text color */
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    padding: 5px; /* Common padding for inputs */
 }
 
 .search-button {
     padding-right: 10px;
     padding-left: 40px;
     background: url('/static/media/searchblack.png') 95% center no-repeat;
-    background-size: 22px; /* Adjust the size as needed */
+    background-size: 22px; /* Adjusted the size of the icon */
 }
 
 ::placeholder {
-    color: black!important;
-}
-
-.zip-input, .zip-input:focus {
-    color: black;
-    background-color: #f5f5f5 !important;
-    border-radius: 50px;
-    padding-left: 45px;
+    color: black !important;
 }
 
 .area-title {
@@ -67,3 +61,4 @@ input, form {
 .location {
     margin-right: 10px;
 }
+

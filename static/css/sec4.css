@@ -1,4 +1,5 @@
 /* Styling for index.html section 4 */
+
 .sec4 {
     display: flex;
     justify-content: space-between;
@@ -8,7 +9,7 @@
 .visual-map {
     position: relative;
     overflow: hidden;
-    background-color:  #fff;
+    background-color: #fff;
     width: 42.5%;
 }
 
@@ -20,12 +21,11 @@
     height: 100%;
 }
 
-/* 7-day forecast section */
 .forecast {
     background-color: #fff;
     width: 55%;
     padding: 20px;
-    margin-right: 2.5%
+    margin-right: 2.5%;
 }
 
 .forecast__list {
@@ -38,7 +38,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     color: black;
     font-weight: normal;
     font-size: 18px;

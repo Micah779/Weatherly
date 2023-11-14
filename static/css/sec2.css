@@ -1,42 +1,33 @@
-/* styling for index.html section 2 */
+/* Styling for index.html section 2 */
 
 .sec2 {
-    display: flex;
-    justify-content: space-between;
-    height: 23%;
-    width: 100%;
-    padding: 40px 205px 0 205px; 
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  height: 23%;
+  width: 100%;
+  padding: 40px 205px 0 205px;
+}
+
 .left-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    line-height: 1;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.right-side, .temp-cond, .temperature, .location {
+  display: flex;
+  color: #000;
+  font-size: 30px;
+  font-weight: normal;
+}
+
 .right-side {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: #000;
-    font-size: 30px; 
-    line-height: 1;
-    font-weight: normal;
-  }
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .right-side p {
   margin-left: 10px;
 }
-  
-.temp-cond, .temperature {
-    display: flex;
-    color: #000;
-    font-size: 30px;
-    font-weight: normal;
-  }
-
-.location {
-    color: #000;
-    font-size: 30px;
-  }

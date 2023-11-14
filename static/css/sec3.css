@@ -1,111 +1,67 @@
-/* styling for index.html section 3 */
+/* Styling for index.html section 3 */
 
 .sec3 {
-    display: flex;
-    justify-content:left;
-    height: 20%;
-    width: 100%;
-    padding-left: 205px;
-    padding-right: 205px;
+  display: flex;
+  justify-content: left;
+  height: 20%;
+  width: 100%;
+  padding: 0 205px;
+}
+
+.hourly-forecast, .humidity, .feels-like {
+  background-color: #fff;
+  height: 20vh;
+  margin-right: 2.5%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
 }
 
 .hourly-forecast {
-    background-color: #fff;
-    width: 55%;
-    height: 20vh;
-    margin-right: 2.5%;
+  width: 55%;
 }
 
-.humidity {
-    background-color: #fff;
-    width: 20%;
-    height: 20vh;
-    margin-right: 2.5%;
+.humidity, .feels-like {
+  width: 20%;
 }
 
-.hourly {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-  }
-  
-  .hourly-times, .hourly-temps {
-    display: flex;
-    flex-direction: row;
-    font-size: 18px;
-    font-weight: normal;
-  }
-  
-  .hourly-times p {
-    margin-right: 20px;
-    color: #000000;
-  }
-  
-  .hourly-temps p {
-    margin-right: 40px;
-    color: #000000;
-  }
-  
-  .hourly-title {
-    font-size: 18px;
-    font-weight: normal;
-    color: red;
-  }
+.hourly-times, .hourly-temps, .hourly-title, .humidity-info, .feels-info {
+  display: flex;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+}
 
-  .divider {
-    width: 90%;
-    height: 1px;
-    background: #000000;
-    margin-bottom: 10px;
-    margin-top: -5px;
-  }
+.hourly-title {
+  color: red;
+  font-size: 18px;
+}
 
-  /* humidity */
+.hourly-times p {
+  margin-right: 20px;
+}
 
-  .humidity {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-  }
+.hourly-temps p {
+  margin-right: 40px;
+}
 
-  .humidity-info {
-    display: flex;
-    flex-direction: row;
-  }
+.humidity p, .feels-like p {
+  font-size: 18px;
+  font-weight: normal;
+  color: black;
+  margin-right: 20px;
+}
 
-  /* feels like */
+.humidity-value, .feels-value {
+  font-size: 30px !important;
+}
 
-  .feels-like {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    background-color: #fff;
-    width: 20%;
-    height: 20vh;
-  }
+.humidity img, .feels-like img {
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+}
 
-  .feels-info {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .humidity p, .feels-like p {
-    color: black;
-    font-size: 18px;
-    font-weight: normal;
-    margin-right: 20px;
-  }
-
-  .humidity-value, .feels-value {
-    font-size: 30px !important;
-  }
-
-  .humidity img, .feels-like img {
-    width: 28px;
-    height: 28px;
-    margin-right: 5px;
-  }
-
-  .humidity-info p, .feels-info p{
-    color: red;
-  }
+.humidity-info p, .feels-info p {
+  color: red;
+}

@@ -2,15 +2,15 @@
 
 .sec4 {
     display: flex;
-    justify-content: space-between;
-    padding: 1.75% 205px;
+    justify-content: left;
+    padding: 1.75% 210px;
 }
 
 .visual-map {
     position: relative;
     overflow: hidden;
     background-color: #fff;
-    width: 42.5%;
+    width: 40%;
 }
 
 #map {

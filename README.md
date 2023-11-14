@@ -19,10 +19,10 @@ Weatherly is a web application that provides weather information and in the futu
 
 ## Screenshots
 
-![Screenshot 1](/weatherlyshot2.png)
+![Screenshot 1](/weatherlyshot1.png)
 *Light Mode*
 
-![Screenshot 2](/weatherlyshot1.png)
+![Screenshot 2](/weatherlyshot2.png)
 *Dark Mode*
 
 ### Prerequisites

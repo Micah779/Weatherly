@@ -19,10 +19,12 @@
 
 .hourly-forecast {
   width: 55%;
+  border-radius: 20px;
 }
 
 .humidity, .feels-like {
   width: 20%;
+  border-radius: 20px;
 }
 
 .hourly-times, .hourly-temps, .hourly-title, .humidity-info, .feels-info {
